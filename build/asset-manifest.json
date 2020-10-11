@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d80dacfa.chunk.css",
+    "main.js": "/static/js/main.9eae45ff.chunk.js",
+    "main.js.map": "/static/js/main.9eae45ff.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.361cba25.js",
+    "runtime-main.js.map": "/static/js/runtime-main.361cba25.js.map",
+    "static/js/2.a6e79414.chunk.js": "/static/js/2.a6e79414.chunk.js",
+    "static/js/2.a6e79414.chunk.js.map": "/static/js/2.a6e79414.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.34fba84f3392bd58b4ca3db762e0fc15.js": "/precache-manifest.34fba84f3392bd58b4ca3db762e0fc15.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d80dacfa.chunk.css.map": "/static/css/main.d80dacfa.chunk.css.map",
+    "static/js/2.a6e79414.chunk.js.LICENSE.txt": "/static/js/2.a6e79414.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/bg.c1274608.png",
+    "static/media/logo-figma.svg": "/static/media/logo-figma.f9233770.svg",
+    "static/media/logo-framer.svg": "/static/media/logo-framer.29a42449.svg",
+    "static/media/logo-invision.svg": "/static/media/logo-invision.8b285cc0.svg",
+    "static/media/logo-react.svg": "/static/media/logo-react.d60d8202.svg",
+    "static/media/logo-sketch.svg": "/static/media/logo-sketch.5ce493ec.svg",
+    "static/media/logo-xcode.svg": "/static/media/logo-xcode.b957b2d8.svg",
+    "static/media/logo.svg": "/static/media/logo.9202cd02.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.361cba25.js",
+    "static/js/2.a6e79414.chunk.js",
+    "static/css/main.d80dacfa.chunk.css",
+    "static/js/main.9eae45ff.chunk.js"
+  ]
+}

@@ -37,6 +37,7 @@ class Hero extends Component {
           >
             {this.state.message}
           </a>
+
           <Logos />
         </div>
 

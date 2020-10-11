@@ -3,6 +3,20 @@ import Nav from "./Nav";
 
 import Logos from "./Logos";
 class Hero extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      message: "Watch the video",
+    };
+  }
+
+  buttonChange() {
+    this.setState({
+      message: "You watched the video",
+    });
+  }
+
   render() {
     return (
       <div className="Hero">
@@ -16,8 +30,12 @@ class Hero extends Component {
             Complete courses about the best tools and design systems. Prototype
             and build apps with React and Swift.
           </p>
-          <a className="btn btn_watch" href="#">
-            Watch the video
+          <a
+            onClick={() => this.buttonChange()}
+            className="btn btn_watch"
+            href="#"
+          >
+            {this.state.message}
           </a>
           <Logos />
         </div>

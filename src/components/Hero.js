@@ -43,8 +43,8 @@ class Hero extends Component {
 
         <svg
           width="100%"
-          height="90"
-          viewBox="0 0 100% 90"
+          height="110"
+          viewBox="0 0 100% 110"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >

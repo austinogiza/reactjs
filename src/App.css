@@ -12,6 +12,9 @@
   --blue: #9de1e5;
   --blue-gradient: linear-gradient(93.96deg, #4b26ff 0%, #b01eff 100%);
   --dark-blue: #56ccf2;
+  --grey: #b9c8dd;
+  --purple: #205284;
+  --text: linear-gradient(93.26deg, #050a27 0%, #4a548c 98.69%);
 }
 
 @font-face {
@@ -257,9 +260,194 @@ body {
   width: 40px;
   height: 40px;
   z-index: 10;
+  align-self: center;
+  justify-self: center;
+  transition: 0.3s cubic-bezier(0.03, 0.82, 0.87, 0.46);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-@media (max-width: 700px) {
+.logos img:hover {
+  transform: scale(1.8, 1.8);
+}
+.logos img:hover img {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+.Try {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Try .container {
+  max-width: 900px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Try h1 {
+  font-size: 18px;
+  margin: 8px 0;
+  font-weight: 700;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+.Try p {
+  font-size: 16px;
+  margin: 8px auto;
+  font-weight: 400;
+  color: var(--purple);
+  max-width: 500px;
+  text-align: center;
+}
+.btn_free {
+  width: 230px;
+  height: 60px;
+  background: var(--blue-gradient);
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 30px;
+  color: var(--white);
+  margin: 8px 0;
+}
+
+.Card {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin: 8px 0;
+}
+.Card .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.Card_title {
+  margin: 8px 0;
+  padding: 10px 15px;
+}
+.Card_title h1 {
+  font-size: 60px;
+  margin: 24px 0;
+  background: var(--text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Card_cover {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: 230px;
+  width: 100%;
+  height: 100%;
+}
+
+.Card_box {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, auto);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 20px;
+  transition: 0.8s cubic-bezier(0.03, 0.82, 0.87, 0.46);
+}
+
+.Card_box:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 0px 20px 60px rgba(255, 255, 255, 0.1);
+}
+
+.Card_box .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Card_box .left h1 {
+  font-size: 21px;
+}
+
+.Card_box .left p {
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.Card_box .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card_box .right h1 {
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+.Card_box .right h1::before {
+  font-size: 18px;
+  position: absolute;
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px 30px;
+  border: 1px solid var(--white);
+  content: "";
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.Card_box img {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  right: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  .Card_cover {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: 250px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 600px) {
   .nav_links {
     width: 100%;
     height: 100%;
@@ -267,6 +455,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+
+  .Card_title h1 {
+    font-size: 34px;
+    text-align: center;
   }
   .Hero h1 {
     font-size: 30px;
@@ -280,12 +473,21 @@ body {
   }
 
   .logos {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
   }
   .logos img {
     width: 30px;
     height: 30px;
     z-index: 10;
+  }
+
+  .Card_cover {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: 250px;
+    width: 100%;
+    height: 100%;
   }
 }
